@@ -37,6 +37,7 @@ $(function() {
 			dom += '<td>' + item.id + '</td>';
 			dom += '<td>' + item.realname + '</td>';
 			dom += '<td>' + item.region + '</td>';
+			dom += '<td><a href=">试题' + item._links.datis.href + '"</a></td>';
 			dom += '</tr>';
 		});
 
@@ -50,6 +51,7 @@ $(function() {
 		dom += '<td>' + data.id + '</td>';
 		dom += '<td>' + data.realname + '</td>';
 		dom += '<td>' + data.region + '</td>';
+		dom += '<td><a href=">试题' + data._links.datis.href + '"</a></td>';
 		dom += '</tr>';
 		$table.append(dom);
 	};
