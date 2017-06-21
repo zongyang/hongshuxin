@@ -6,16 +6,26 @@ $(function() {
 	});
 
 	function load(keyword) {
-		console.log(keyword)
 		$.ajax({
 			type: 'get',
 			url: '/api/users/search/findByNameAllIgnoringCase',
 			data: {
 				name: keyword
 			}
-		}).done(function(response) {
-			render(response);
-		});
+		}).done(renderSingle);
+	};
+
+	function loadByJsonP(keyword) {
+		$.ajax({
+			type: 'get',
+			dataType: "jsonp",
+			jsonpCallback: 'callback',
+			url: '/api/users/search/findByNameAllIgnoringCase',
+			//url: 'http://127.0.0.1:3000/jsonp',
+			data: {
+				name: keyword
+			}
+		}).done(render);
 	};
 
 	function render(data) {
@@ -30,6 +40,17 @@ $(function() {
 			dom += '</tr>';
 		});
 
+		$table.append(dom);
+	};
+
+	function renderSingle(data) {
+		var $table = $('.table-search tbody').empty();
+		var dom = '';
+		dom += '<tr>';
+		dom += '<td>' + data.id + '</td>';
+		dom += '<td>' + data.realname + '</td>';
+		dom += '<td>' + data.region + '</td>';
+		dom += '</tr>';
 		$table.append(dom);
 	};
 });
