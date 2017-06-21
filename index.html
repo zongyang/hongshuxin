@@ -30,11 +30,11 @@
 			<div class="col-md-9">
 				<div class="row">
 					<div class="col-md-6">
-						<form novalidate>
+						<form name="from" novalidate>
 							<div class="input-group">
-								<input type="text" class="form-control input-keyword" />
+								<input ng-model="keyword" name="keyword" type="text" class="form-control input-keyword" required/>
 								<span class="input-group-btn">
-					   				<button type="submit" ng-click="search()" class="btn btn-primary btn-search">
+					   				<button type="submit" ng-disabled="from.$invalid" ng-click="search()" class="btn btn-primary btn-search">
 					    				<i class="fa fa-search"></i>
 					    			</button>
        							</span>
