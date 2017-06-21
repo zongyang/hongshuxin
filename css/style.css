@@ -1,0 +1,32 @@
+.container {
+	margin-top: 80px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: #080808;
+}
+.table-search{
+	margin-top: 15px;
+}
+.table-search th,td{
+	text-align: center;
+}
+.hide{
+	display: none;
+}
+button.list-group-item{
+	text-align: center;
+}
+@media (max-width: 768px) {
+	.container {
+		margin-top: 130px;
+	}
+}
