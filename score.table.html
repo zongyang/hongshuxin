@@ -1,0 +1,25 @@
+<div ng-if="scoreTb">
+	<table class="table table-bordered table-hover table-striped table-score">
+		<thead>
+			<tr>
+				<th>题目编号</th>
+				<th>题型</th>
+				<th>题干</th>
+				<th>已填</th>
+				<th>正确答案</th>
+				<th>得分</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="score in scores">
+				<td>{{score.number}}</td>
+				<td>{{score.leibie|paperType}}</td>
+				<td>{{score.tigan}}</td>
+				<td>{{score.user_answer}}</td>
+				<td>{{score.right_answers}}</td>
+				<td>{{score.defen}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<button type="button" class="btn btn-primary" ng-click="showUserTb()">返回用户</button>
+</div>

@@ -13,14 +13,14 @@
 .navbar-inverse .navbar-nav>li>a:hover {
 	background-color: #080808;
 }
-.table-search{
+.table-search,.table-score{
 	margin-top: 15px;
 }
-.table-search th,td{
-	text-align: center;
+.table-search th,.table-search td,.table-score th,.table-score td{
+	/*text-align: center;*/
 }
-.hide{
-	display: none;
+.margin-top-15{
+	margin-top: 15px;
 }
 button.list-group-item{
 	text-align: center;

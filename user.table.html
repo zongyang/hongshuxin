@@ -1,0 +1,18 @@
+<table ng-if="searchTb" class="table table-bordered table-hover table-striped table-search">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>名字</th>
+			<th>营业厅</th>
+			<th>试题</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-if="user">
+			<td>{{user.id}}</td>
+			<td>{{user.realname}}</td>
+			<td>{{user.region}}</td>
+			<td><a href="" ng-click="goScore()">答题情况</a> | <a ng-href="/api/users/{{user.id}}/datis" target="_blank">试卷</a></td>
+		</tr>
+	</tbody>
+</table>
