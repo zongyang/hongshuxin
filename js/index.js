@@ -9,7 +9,7 @@ $(function() {
 		console.log(keyword)
 		$.ajax({
 			type: 'get',
-			url: 'api/users/search/findByNameAllIgnoringCase',
+			url: '/api/users/search/findByNameAllIgnoringCase',
 			data: {
 				name: keyword
 			}
